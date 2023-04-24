@@ -34,7 +34,7 @@ public class openTab {
         String index2 = list.get(0);
         driver.switchTo().window(index2);
         driver.get("http://www.gogle.com");
-        String str="document.querySelector('body > ntp-app').shadowRoot.querySelector('#realbox').shadowRoot.querySelector('#input')";
+        String str="return document.querySelector('body > ntp-app').shadowRoot.querySelector('#realbox').shadowRoot.querySelector('#input')";
         JavascriptExecutor js=(JavascriptExecutor)driver;
         WebElement ele1 = (WebElement)js.executeScript(str);
         ele1.sendKeys("manju");
